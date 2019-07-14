@@ -97,7 +97,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="73" id="R2d-1W-S6k">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventInfoCell" rowHeight="73" id="R2d-1W-S6k" customClass="EventInfoCell" customModule="Expenses_Checker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R2d-1W-S6k" id="2dX-VV-7HL">
@@ -144,8 +144,17 @@
                                                 <constraint firstItem="YDB-6s-gK1" firstAttribute="top" secondItem="2dX-VV-7HL" secondAttribute="topMargin" id="wXT-r7-03b"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="YDB-6s-gK1" id="PNA-XB-Qh5"/>
+                                            <outlet property="expenseTypeLabel" destination="xhy-1B-scr" id="Gky-Mv-kdu"/>
+                                            <outlet property="moneyAmountLabel" destination="Zs9-ux-Q9z" id="ImU-YJ-FIV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i0Z-L8-Vbe" id="hVg-6b-iNF"/>
+                                    <outlet property="delegate" destination="i0Z-L8-Vbe" id="4M3-Y2-BXM"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,6 +171,7 @@
                         <viewLayoutGuide key="safeArea" id="meR-4s-Pf6"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="qu9-GR-6vL" id="HHZ-PD-rHq"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="fromExpensesToLogin" id="oie-gE-Y13"/>
                         <segue destination="tSO-se-h96" kind="show" identifier="fromMainToAddEvent" id="vwt-Qu-Gak"/>
                     </connections>

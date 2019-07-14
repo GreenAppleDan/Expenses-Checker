@@ -13,6 +13,7 @@ import RealmSwift
 protocol RealmServiceProtocol {
     func setDefaultRealmForUser(username:String)
     func addEvent(eventType: String, moneyAmount: Int, eventDate: Date)
+    func getArrayOfMoneyEvents() -> [Expenses]
 }
 
 class RealmService: RealmServiceProtocol {
@@ -34,6 +35,18 @@ class RealmService: RealmServiceProtocol {
         try! realm.write {
            realm.add(expense)
         }
+    }
+    
+    func getArrayOfMoneyEvents() -> [Expenses] {
+        let realm = try! Realm()
+        let arrayOfResults = realm.objects(Expenses.self)
+        var arrayOfEvents = [Expenses]()
+        for event in arrayOfResults{
+            arrayOfEvents.append(event)
+        }
+        return arrayOfEvents.sorted(by: {$0.date!.timeIntervalSince1970 > $1.date!.timeIntervalSince1970 })
+        
+        
     }
     
     

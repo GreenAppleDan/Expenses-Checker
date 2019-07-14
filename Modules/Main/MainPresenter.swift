@@ -11,9 +11,6 @@ import Foundation
 
 class MainPresenter: MainPresenterProtocol {
     
-    
-    
-    
     weak var view: MainViewProtocol!
     var interactor: MainInteractorProtocol!
     var router: MainRouterProtocol!
@@ -25,7 +22,11 @@ class MainPresenter: MainPresenterProtocol {
     // MARK: - MainPresenterProtocol methods
     
     func configureView() {
-
+        interactor.getEvents()
+    }
+    
+    func viewWillAppear(){
+        interactor.getEvents()
     }
     
     func logOutButtonClicked() {
@@ -34,6 +35,15 @@ class MainPresenter: MainPresenterProtocol {
     
     func showAddEventView() {
         router.moveToAddEvent()
+    }
+    
+    func eventsDidRecieve(_ arrayOfEvents: [Expenses]) {
+        var arrayOfCellModels = [EventInfoCellmodel]()
+        for event in arrayOfEvents {
+            let cellModel = EventInfoCellmodel(expense: event)
+            arrayOfCellModels.append(cellModel)
+            view?.updateModelsArray(arrayOfCellModels)
+        }
     }
 }
 

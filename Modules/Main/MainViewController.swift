@@ -14,6 +14,9 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     let selfToLoginSegueName = "fromExpensesToLogin"
     let selfToAddEvent = "fromMainToAddEvent"
+    var modelsArray = [EventInfoCellmodel]()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func logOutButtonClicked(_ sender: UIBarButtonItem) {
         presenter.logOutButtonClicked()
@@ -26,6 +29,11 @@ class MainViewController: UIViewController, MainViewProtocol {
     @IBAction func reportButtonClicked(_ sender: UIBarButtonItem) {
     }
     
+    func updateModelsArray(_ array: [EventInfoCellmodel]){
+        self.modelsArray = array
+        
+        tableView.reloadData()
+    }
     var presenter: MainPresenterProtocol!
     let configurator: MainConfiguratorProtocol = MainConfigurator()
 
@@ -37,6 +45,31 @@ class MainViewController: UIViewController, MainViewProtocol {
         presenter.configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.viewWillAppear()
+    }
+    
 }
 
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return modelsArray.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = modelsArray[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier) as! EventInfoCell
+        cell.model = model
+        
+        return cell
+    }
+    
+    
+    
+    
+}

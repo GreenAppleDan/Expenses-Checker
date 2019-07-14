@@ -13,6 +13,13 @@
 		14F71AD922D7C58700FBA3BC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AD822D7C58700FBA3BC /* RealmService.swift */; };
 		14F71ADC22D9206F00FBA3BC /* ExpenseTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71ADB22D9206F00FBA3BC /* ExpenseTypePickerView.swift */; };
 		14F71AE022D922BB00FBA3BC /* ExpenseTypePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F71ADF22D922BB00FBA3BC /* ExpenseTypePickerView.xib */; };
+		14F71AE322DBABF100FBA3BC /* EventBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AE222DBABF100FBA3BC /* EventBaseCell.swift */; };
+		14F71AE622DBACDE00FBA3BC /* ModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AE522DBACDE00FBA3BC /* ModelRepresentable.swift */; };
+		14F71AE822DBAD0D00FBA3BC /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AE722DBAD0D00FBA3BC /* CellIdentifiable.swift */; };
+		14F71AEA22DBAE1700FBA3BC /* EventInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AE922DBAE1700FBA3BC /* EventInfoCell.swift */; };
+		14F71AEF22DBAEEC00FBA3BC /* EventBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AEE22DBAEEC00FBA3BC /* EventBaseCellModel.swift */; };
+		14F71AF122DBAF3C00FBA3BC /* EventInfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AF022DBAF3C00FBA3BC /* EventInfoCellModel.swift */; };
+		14F71AF422DBC20300FBA3BC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AF322DBC20300FBA3BC /* DateExtension.swift */; };
 		14F81B2022D65DC600009DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81B1F22D65DC600009DD1 /* AppDelegate.swift */; };
 		14F81B2522D65DC600009DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F81B2322D65DC600009DD1 /* Main.storyboard */; };
 		14F81B2822D65DC600009DD1 /* Expenses_Checker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14F81B2622D65DC600009DD1 /* Expenses_Checker.xcdatamodeld */; };
@@ -45,6 +52,13 @@
 		14F71AD822D7C58700FBA3BC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		14F71ADB22D9206F00FBA3BC /* ExpenseTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTypePickerView.swift; sourceTree = "<group>"; };
 		14F71ADF22D922BB00FBA3BC /* ExpenseTypePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTypePickerView.xib; sourceTree = "<group>"; };
+		14F71AE222DBABF100FBA3BC /* EventBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBaseCell.swift; sourceTree = "<group>"; };
+		14F71AE522DBACDE00FBA3BC /* ModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRepresentable.swift; sourceTree = "<group>"; };
+		14F71AE722DBAD0D00FBA3BC /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		14F71AE922DBAE1700FBA3BC /* EventInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoCell.swift; sourceTree = "<group>"; };
+		14F71AEE22DBAEEC00FBA3BC /* EventBaseCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBaseCellModel.swift; sourceTree = "<group>"; };
+		14F71AF022DBAF3C00FBA3BC /* EventInfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoCellModel.swift; sourceTree = "<group>"; };
+		14F71AF322DBC20300FBA3BC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		14F81B1C22D65DC600009DD1 /* Expenses Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expenses Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F81B1F22D65DC600009DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F81B2422D65DC600009DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,9 +119,45 @@
 			path = ExpenseTypePickerView;
 			sourceTree = "<group>";
 		};
+		14F71AE122DBAB8100FBA3BC /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AEE22DBAEEC00FBA3BC /* EventBaseCellModel.swift */,
+				14F71AF022DBAF3C00FBA3BC /* EventInfoCellModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
+		14F71AE422DBACC600FBA3BC /* CellProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AE522DBACDE00FBA3BC /* ModelRepresentable.swift */,
+				14F71AE722DBAD0D00FBA3BC /* CellIdentifiable.swift */,
+			);
+			path = CellProtocols;
+			sourceTree = "<group>";
+		};
+		14F71AED22DBAE9800FBA3BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AE222DBABF100FBA3BC /* EventBaseCell.swift */,
+				14F71AE922DBAE1700FBA3BC /* EventInfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		14F71AF222DBC1EE00FBA3BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AF322DBC20300FBA3BC /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		14F81B1322D65DC600009DD1 = {
 			isa = PBXGroup;
 			children = (
+				14F71AF222DBC1EE00FBA3BC /* Extensions */,
 				14F71ADA22D91EA300FBA3BC /* ExpenseTypePickerView */,
 				14F71AD722D7BF6F00FBA3BC /* Services */,
 				14F81B1E22D65DC600009DD1 /* Expenses Checker */,
@@ -163,6 +213,9 @@
 		5668156A7DE5B25E4DA14533 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				14F71AED22DBAE9800FBA3BC /* Cells */,
+				14F71AE422DBACC600FBA3BC /* CellProtocols */,
+				14F71AE122DBAB8100FBA3BC /* CellModels */,
 				7C705A831506296A41D4EAF0 /* MainViewController.swift */,
 				2C55E3FD36239D3F55AD2D03 /* MainPresenter.swift */,
 				1D0B529BAE15B8E589258157 /* MainInteractor.swift */,
@@ -334,26 +387,33 @@
 				141A6C5022D7B9D300FC211F /* ExpensesTypes.swift in Sources */,
 				14F81B2022D65DC600009DD1 /* AppDelegate.swift in Sources */,
 				14F81B2822D65DC600009DD1 /* Expenses_Checker.xcdatamodeld in Sources */,
+				14F71AE322DBABF100FBA3BC /* EventBaseCell.swift in Sources */,
 				6A191C574DD5A7C88CC3D2AD /* LoginViewController.swift in Sources */,
 				14F81B3822D7B55E00009DD1 /* User.swift in Sources */,
 				10E10C1FBF1C8F1298CD3D5D /* LoginPresenter.swift in Sources */,
 				98CCE1C11351B94F1BE03B09 /* LoginInteractor.swift in Sources */,
 				1D02CCA01F3484F7CE0DBECB /* LoginConfigurator.swift in Sources */,
+				14F71AF422DBC20300FBA3BC /* DateExtension.swift in Sources */,
+				14F71AE622DBACDE00FBA3BC /* ModelRepresentable.swift in Sources */,
 				14F71AD922D7C58700FBA3BC /* RealmService.swift in Sources */,
 				9AF62B09A31BF1D14C8930D8 /* LoginRouter.swift in Sources */,
 				141A6C4E22D7B90E00FC211F /* Expenses.swift in Sources */,
 				D13D156C8F17A761C76DD063 /* LoginProtocols.swift in Sources */,
+				14F71AF122DBAF3C00FBA3BC /* EventInfoCellModel.swift in Sources */,
 				14F71ADC22D9206F00FBA3BC /* ExpenseTypePickerView.swift in Sources */,
 				2B3E02EE63CBE2FDDB4229C7 /* MainViewController.swift in Sources */,
 				BF1766EACF23A848761F6C22 /* MainPresenter.swift in Sources */,
+				14F71AE822DBAD0D00FBA3BC /* CellIdentifiable.swift in Sources */,
 				7467E9EB172636332D289F0E /* MainInteractor.swift in Sources */,
 				D663D9EA92C169B1509C8104 /* MainConfigurator.swift in Sources */,
 				B59F1D1A1B0BFC69CB585CCC /* MainRouter.swift in Sources */,
 				83A0BE24F36CBE0DDF3D35A7 /* MainProtocols.swift in Sources */,
 				B4928EE7E4BB48993DC37468 /* AddEventViewController.swift in Sources */,
 				8DEC7E6FF0191A408D555BB0 /* AddEventPresenter.swift in Sources */,
+				14F71AEA22DBAE1700FBA3BC /* EventInfoCell.swift in Sources */,
 				8499387DDA4A0D0A5261B635 /* AddEventInteractor.swift in Sources */,
 				75C7B52F469ACECE4FE96157 /* AddEventConfigurator.swift in Sources */,
+				14F71AEF22DBAEEC00FBA3BC /* EventBaseCellModel.swift in Sources */,
 				BC0B715A712413D232E54D8F /* AddEventRouter.swift in Sources */,
 				68220D42CDA328665BFD6147 /* AddEventProtocols.swift in Sources */,
 			);

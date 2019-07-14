@@ -10,6 +10,8 @@
 import Foundation
 
 protocol MainViewProtocol: class {
+    var modelsArray : [EventInfoCellmodel] {get set}
+    func updateModelsArray(_ array: [EventInfoCellmodel])
 }
 
 protocol MainPresenterProtocol: class {
@@ -17,9 +19,15 @@ protocol MainPresenterProtocol: class {
     func configureView()
     func logOutButtonClicked()
     func showAddEventView()
+    func eventsDidRecieve(_ arrayOfEvents: [Expenses])
+    func viewWillAppear()
+    
 }
 
 protocol MainInteractorProtocol: class {
+    var realmService: RealmServiceProtocol? {get set}
+    func getEvents()
+    
 }
 
 protocol MainRouterProtocol: class {
