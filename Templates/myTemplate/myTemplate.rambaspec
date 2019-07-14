@@ -1,0 +1,33 @@
+# Template information section
+name: myTemplate
+summary: new one
+author: denis.zhukoborsky
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+
+# View layer
+- {name: ViewController.swift,  path: Code/viewcontroller_swift.liquid}
+
+#Presenter
+- {name: Presenter.swift,  path: Code/presenter_swift.liquid}
+
+#Interactor
+- {name: Interactor.swift,  path: Code/interactor_swift.liquid}
+
+#Configurator
+- {name: Configurator.swift,  path: Code/configurator_swift.liquid}
+
+#Router
+- {name: Router.swift,  path: Code/router_swift.liquid}
+
+#Protocols
+- {name: Protocols.swift,  path: Code/protocols_swift.liquid}
+
+
+
+# The declarations for test files
+
+

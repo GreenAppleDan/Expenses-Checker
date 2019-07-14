@@ -1,0 +1,22 @@
+### Headers settings
+company: denis.zhukoborsky
+
+### Xcode project settings
+project_name: Expenses Checker
+xcodeproj_path: Expenses Checker.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Expenses Checker
+
+# The file path for new modules
+project_file_path: Modules
+
+# The Xcode group path to new modules
+project_group_path: Modules
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}

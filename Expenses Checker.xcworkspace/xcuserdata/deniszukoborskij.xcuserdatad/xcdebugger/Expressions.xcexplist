@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ExpenseTypePickerView.init(coder:):ExpenseTypePickerView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ExpensesTypes.arrayOfExpensesTypes">
+            </PersistentString>
+            <PersistentString
+               value = "arrayExpenseTypes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.loginButtonClickedLogin(_:):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "usernameTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddEventViewController.moneyAmountDidEndEditing(_:):AddEventViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "eventType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
