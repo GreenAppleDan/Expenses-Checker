@@ -69,7 +69,7 @@ class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
     }
     
     func DatePickerViewApplyButtonClicked(selectedRow: Int) {
-        var dateString = datePickerView.arrayOfTimes[selectedRow]
+        let dateString = datePickerView.arrayOfTimes[selectedRow]
         view.hidePickerView()
         view.changeDateButtonName(to: dateString)
         
