@@ -19,7 +19,7 @@ struct ExpensesTypes {
     static let traveling = "Traveling"
     static let health = "Health"
     static let technicalGoods = "Technical Goods"
-    static let recklessExpenses = "Reckkless Expenses"
+    static let recklessExpenses = "Reckless Expenses"
     static let phone = "Phone"
     static let forcedExpenses = "Forced Expenses"
     static let arrayOfExpensesTypes: [String] = [ExpensesTypes.noCategory , ExpensesTypes.food , ExpensesTypes.transport,ExpensesTypes.clothes,ExpensesTypes.houseExpenses,ExpensesTypes.restaurants,ExpensesTypes.entertainment,ExpensesTypes.traveling,ExpensesTypes.health,ExpensesTypes.technicalGoods,ExpensesTypes.recklessExpenses,ExpensesTypes.phone,ExpensesTypes.forcedExpenses]

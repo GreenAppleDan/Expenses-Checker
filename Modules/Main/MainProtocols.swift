@@ -21,6 +21,7 @@ protocol MainPresenterProtocol: class {
     func showAddEventView()
     func eventsDidRecieve(_ arrayOfEvents: [Expenses])
     func viewWillAppear()
+    func reportButtonCLicked()
     
 }
 
@@ -33,6 +34,7 @@ protocol MainInteractorProtocol: class {
 protocol MainRouterProtocol: class {
     func moveToLogin ()
     func moveToAddEvent()
+    func moveToReports()
 }
 
 protocol MainConfiguratorProtocol: class {

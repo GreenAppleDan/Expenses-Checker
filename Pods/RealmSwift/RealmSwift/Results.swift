@@ -337,7 +337,7 @@ public final class Results<Element: RealmCollectionValue>: NSObject, NSFastEnume
      will reflect the state of the Realm after the write transaction.
 
      ```swift
-     let dogs = realm.objects(Dog.self)
+     let results = realm.objects(Dog.self)
      print("dogs.count: \(dogs?.count)") // => 0
      let token = dogs.observe { changes in
          switch changes {
@@ -418,16 +418,3 @@ extension Results: AssistedObjectiveCBridgeable {
         return (objectiveCValue: rlmResults, metadata: nil)
     }
 }
-
-// MARK: - Codable
-
-#if swift(>=4.1)
-extension Results: Encodable where Element: Encodable {
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.unkeyedContainer()
-        for value in self {
-            try container.encode(value)
-        }
-    }
-}
-#endif

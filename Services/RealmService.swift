@@ -14,6 +14,7 @@ protocol RealmServiceProtocol {
     func setDefaultRealmForUser(username:String)
     func addEvent(eventType: String, moneyAmount: Int, eventDate: Date)
     func getArrayOfMoneyEvents() -> [Expenses]
+    func getArrayOfMoneyEventsFilteredWithDate(date: Date) -> [Expenses]
 }
 
 class RealmService: RealmServiceProtocol {
@@ -46,6 +47,18 @@ class RealmService: RealmServiceProtocol {
         }
         return arrayOfEvents.sorted(by: {$0.date!.timeIntervalSince1970 > $1.date!.timeIntervalSince1970 })
         
+        
+    }
+    
+    func getArrayOfMoneyEventsFilteredWithDate(date: Date) -> [Expenses] {
+        let realm = try! Realm()
+        let arrayOfResults = realm.objects(Expenses.self).filter("date >= %@", date)
+        var arrayOfEvents = [Expenses]()
+        
+        for event in arrayOfResults{
+            arrayOfEvents.append(event)
+        }
+        return arrayOfEvents
         
     }
     

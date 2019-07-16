@@ -174,11 +174,64 @@
                         <outlet property="tableView" destination="qu9-GR-6vL" id="HHZ-PD-rHq"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="fromExpensesToLogin" id="oie-gE-Y13"/>
                         <segue destination="tSO-se-h96" kind="show" identifier="fromMainToAddEvent" id="vwt-Qu-Gak"/>
+                        <segue destination="2Rv-MM-PD5" kind="show" identifier="fromMainToReport" id="pmd-3I-Ymp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYL-wK-Qqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="624.375" y="96.126760563380287"/>
+        </scene>
+        <!--Report View Controller-->
+        <scene sceneID="ldW-iP-Pst">
+            <objects>
+                <viewController id="2Rv-MM-PD5" customClass="ReportViewController" customModule="Expenses_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ToX-OA-Fy7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFx-4N-8tf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Report" id="MbY-0O-gxo">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="SpB-th-eGO">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="2Rv-MM-PD5" id="tp8-20-09R"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Monthly" id="qXG-HA-7P7">
+                                            <connections>
+                                                <action selector="changeDateButtonCLicked:" destination="2Rv-MM-PD5" id="IEC-OB-LgB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-O7-bbI" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uGy-O7-bbI" firstAttribute="leading" secondItem="PCU-ty-nWK" secondAttribute="leading" id="RcM-cB-784"/>
+                            <constraint firstItem="uGy-O7-bbI" firstAttribute="top" secondItem="UFx-4N-8tf" secondAttribute="bottom" id="XKo-i6-oY6"/>
+                            <constraint firstItem="UFx-4N-8tf" firstAttribute="top" secondItem="PCU-ty-nWK" secondAttribute="top" id="a0p-Tn-iTy"/>
+                            <constraint firstItem="uGy-O7-bbI" firstAttribute="trailing" secondItem="PCU-ty-nWK" secondAttribute="trailing" id="e1X-6g-EOY"/>
+                            <constraint firstItem="UFx-4N-8tf" firstAttribute="trailing" secondItem="uGy-O7-bbI" secondAttribute="trailing" id="h9O-MB-LgT"/>
+                            <constraint firstItem="UFx-4N-8tf" firstAttribute="leading" secondItem="uGy-O7-bbI" secondAttribute="leading" id="kHJ-q8-uHs"/>
+                            <constraint firstItem="uGy-O7-bbI" firstAttribute="bottom" secondItem="PCU-ty-nWK" secondAttribute="bottom" id="rW8-dH-vr7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PCU-ty-nWK"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateButton" destination="qXG-HA-7P7" id="v5K-0v-y6E"/>
+                        <outlet property="pieChartView" destination="uGy-O7-bbI" id="N3m-3d-8OJ"/>
+                        <segue destination="i0Z-L8-Vbe" kind="show" identifier="fromReportToMain" id="Egs-pL-0K7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTh-od-FUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406.25" y="95.070422535211264"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6kq-r9-vSL">
@@ -286,4 +339,7 @@
             <point key="canvasLocation" x="613.125" y="826.05633802816908"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Egs-pL-0K7"/>
+    </inferredMetricsTieBreakers>
 </document>

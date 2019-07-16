@@ -3,6 +3,64 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ReportViewController.updateChartData():ReportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataEntryArray">
+            </PersistentString>
+            <PersistentString
+               value = "dataEntryArray![0].value">
+            </PersistentString>
+            <PersistentString
+               value = "dataEntryArray![3].value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RealmService.getArrayOfMoneyEventsFilteredWithDate(date:):RealmService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrayOfResults.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.updateModelsArray(_:):MainViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainPresenter.eventsDidRecieve(_:):MainPresenter.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.tableView(_:cellForRowAt:):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "modelsArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddEventViewController.moneyAmountDidEndEditing(_:):AddEventViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "eventType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportPresenter.setupViewForShowingPieChart(arrayOfEvents:):ReportPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.moneyAmount">
+            </PersistentString>
+            <PersistentString
+               value = "dictWithInfo[event.type]">
+            </PersistentString>
+            <PersistentString
+               value = "event.type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ExpenseTypePickerView.init(coder:):ExpenseTypePickerView.swift">
          <PersistentStrings>
             <PersistentString
@@ -18,22 +76,6 @@
          <PersistentStrings>
             <PersistentString
                value = "usernameTextField.text">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "MainViewController.tableView(_:cellForRowAt:):MainViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "modelsArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AddEventViewController.moneyAmountDidEndEditing(_:):AddEventViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "eventType">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

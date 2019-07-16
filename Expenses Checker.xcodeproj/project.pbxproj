@@ -20,6 +20,9 @@
 		14F71AEF22DBAEEC00FBA3BC /* EventBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AEE22DBAEEC00FBA3BC /* EventBaseCellModel.swift */; };
 		14F71AF122DBAF3C00FBA3BC /* EventInfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AF022DBAF3C00FBA3BC /* EventInfoCellModel.swift */; };
 		14F71AF422DBC20300FBA3BC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AF322DBC20300FBA3BC /* DateExtension.swift */; };
+		14F71AF722DDD4C100FBA3BC /* TimeForReportToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AF622DDD4C100FBA3BC /* TimeForReportToShow.swift */; };
+		14F71AFA22DE0F5900FBA3BC /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F71AF922DE0F5900FBA3BC /* DatePickerView.xib */; };
+		14F71AFC22DE131B00FBA3BC /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F71AFB22DE131B00FBA3BC /* DatePickerView.swift */; };
 		14F81B2022D65DC600009DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81B1F22D65DC600009DD1 /* AppDelegate.swift */; };
 		14F81B2522D65DC600009DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F81B2322D65DC600009DD1 /* Main.storyboard */; };
 		14F81B2822D65DC600009DD1 /* Expenses_Checker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14F81B2622D65DC600009DD1 /* Expenses_Checker.xcdatamodeld */; };
@@ -28,6 +31,9 @@
 		14F81B3822D7B55E00009DD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81B3722D7B55E00009DD1 /* User.swift */; };
 		1D02CCA01F3484F7CE0DBECB /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FD770D59A68CB46D631D /* LoginConfigurator.swift */; };
 		2B3E02EE63CBE2FDDB4229C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C705A831506296A41D4EAF0 /* MainViewController.swift */; };
+		356CBC3ABAAE5D95C0244DC2 /* ReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3A49A8A09387E8379CAB3 /* ReportRouter.swift */; };
+		3997EED8E7D57A867F799B39 /* ReportConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92030354C8F5DB4C422AB36D /* ReportConfigurator.swift */; };
+		574E75BBDD24CDD2EFD7F93D /* ReportProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87DE4D89CACB06E2777A82E /* ReportProtocols.swift */; };
 		68220D42CDA328665BFD6147 /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21262B2B7B97E0BE39CF1E58 /* AddEventProtocols.swift */; };
 		6A191C574DD5A7C88CC3D2AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEBAF271315A4817B9D9AA7 /* LoginViewController.swift */; };
 		7467E9EB172636332D289F0E /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B529BAE15B8E589258157 /* MainInteractor.swift */; };
@@ -44,6 +50,9 @@
 		BF1766EACF23A848761F6C22 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55E3FD36239D3F55AD2D03 /* MainPresenter.swift */; };
 		D13D156C8F17A761C76DD063 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E781A100907FBCDAF0D1F34 /* LoginProtocols.swift */; };
 		D663D9EA92C169B1509C8104 /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF791FCFCCE0C52C7455C4 /* MainConfigurator.swift */; };
+		DDC9890EF060CB8482C0863A /* ReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FF166CD1A0F4996F21527D /* ReportPresenter.swift */; };
+		E1AD1E83E8FF3F416053B609 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBCE5B4728DF9543A6F5321 /* ReportViewController.swift */; };
+		FC20F1FE8C80698AEF40CEE8 /* ReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC377911D0A0C3F0A507592F /* ReportInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +68,9 @@
 		14F71AEE22DBAEEC00FBA3BC /* EventBaseCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBaseCellModel.swift; sourceTree = "<group>"; };
 		14F71AF022DBAF3C00FBA3BC /* EventInfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoCellModel.swift; sourceTree = "<group>"; };
 		14F71AF322DBC20300FBA3BC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		14F71AF622DDD4C100FBA3BC /* TimeForReportToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeForReportToShow.swift; sourceTree = "<group>"; };
+		14F71AF922DE0F5900FBA3BC /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		14F71AFB22DE131B00FBA3BC /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		14F81B1C22D65DC600009DD1 /* Expenses Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expenses Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F81B1F22D65DC600009DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F81B2422D65DC600009DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,20 +85,26 @@
 		2C55E3FD36239D3F55AD2D03 /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		31570485BB2FB43128503C62 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		32BF791FCFCCE0C52C7455C4 /* MainConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		38C3A49A8A09387E8379CAB3 /* ReportRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportRouter.swift; sourceTree = "<group>"; };
 		3FE6399A92E42D87173F38EC /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		4893F8C90B269EA8923F53BE /* AddEventRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventRouter.swift; sourceTree = "<group>"; };
 		5A5882C69016046F3BDD332E /* AddEventConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventConfigurator.swift; sourceTree = "<group>"; };
 		5AAB2327F3899C233CA4BC11 /* AddEventViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		66FF166CD1A0F4996F21527D /* ReportPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportPresenter.swift; sourceTree = "<group>"; };
 		6B065D5D5C331310E2215BCC /* AddEventPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
 		7C705A831506296A41D4EAF0 /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7E09483F684E7B61BF107C82 /* Pods-Expenses Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expenses Checker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expenses Checker/Pods-Expenses Checker.release.xcconfig"; sourceTree = "<group>"; };
 		8D62127879DB1596995A3D65 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		8E781A100907FBCDAF0D1F34 /* LoginProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		92030354C8F5DB4C422AB36D /* ReportConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportConfigurator.swift; sourceTree = "<group>"; };
 		9352FD770D59A68CB46D631D /* LoginConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		B87DE4D89CACB06E2777A82E /* ReportProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportProtocols.swift; sourceTree = "<group>"; };
 		C20ACCE0383914388FB169B1 /* MainProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		DC377911D0A0C3F0A507592F /* ReportInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportInteractor.swift; sourceTree = "<group>"; };
 		F2BDE0F6A6BD7E927CA7D9CB /* Pods-Expenses Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expenses Checker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expenses Checker/Pods-Expenses Checker.debug.xcconfig"; sourceTree = "<group>"; };
 		F621DA4B2FFB402B57EF5C86 /* AddEventInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventInteractor.swift; sourceTree = "<group>"; };
 		F6C3B417BA5CC4A5500EDBDB /* Pods_Expenses_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expenses_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBCE5B4728DF9543A6F5321 /* ReportViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		FFEBAF271315A4817B9D9AA7 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,9 +172,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		14F71AF522DDD48000FBA3BC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AF622DDD4C100FBA3BC /* TimeForReportToShow.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		14F71AF822DE0F2300FBA3BC /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				14F71AF922DE0F5900FBA3BC /* DatePickerView.xib */,
+				14F71AFB22DE131B00FBA3BC /* DatePickerView.swift */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
 		14F81B1322D65DC600009DD1 = {
 			isa = PBXGroup;
 			children = (
+				14F71AF822DE0F2300FBA3BC /* DatePickerView */,
+				14F71AF522DDD48000FBA3BC /* Enums */,
 				14F71AF222DBC1EE00FBA3BC /* Extensions */,
 				14F71ADA22D91EA300FBA3BC /* ExpenseTypePickerView */,
 				14F71AD722D7BF6F00FBA3BC /* Services */,
@@ -206,6 +243,7 @@
 				70DDB843A9956B999A4F7E50 /* Login */,
 				5668156A7DE5B25E4DA14533 /* Main */,
 				C67794792172D102AB91B318 /* AddEvent */,
+				92303959935CAAFCD927D798 /* Report */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -254,6 +292,19 @@
 				7E09483F684E7B61BF107C82 /* Pods-Expenses Checker.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		92303959935CAAFCD927D798 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				FCBCE5B4728DF9543A6F5321 /* ReportViewController.swift */,
+				66FF166CD1A0F4996F21527D /* ReportPresenter.swift */,
+				DC377911D0A0C3F0A507592F /* ReportInteractor.swift */,
+				92030354C8F5DB4C422AB36D /* ReportConfigurator.swift */,
+				38C3A49A8A09387E8379CAB3 /* ReportRouter.swift */,
+				B87DE4D89CACB06E2777A82E /* ReportProtocols.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		C67794792172D102AB91B318 /* AddEvent */ = {
@@ -332,6 +383,7 @@
 				14F81B2D22D65DC700009DD1 /* LaunchScreen.storyboard in Resources */,
 				14F71AE022D922BB00FBA3BC /* ExpenseTypePickerView.xib in Resources */,
 				14F81B2A22D65DC700009DD1 /* Assets.xcassets in Resources */,
+				14F71AFA22DE0F5900FBA3BC /* DatePickerView.xib in Resources */,
 				14F81B2522D65DC600009DD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,11 +416,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Expenses Checker/Pods-Expenses Checker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -390,10 +446,12 @@
 				14F71AE322DBABF100FBA3BC /* EventBaseCell.swift in Sources */,
 				6A191C574DD5A7C88CC3D2AD /* LoginViewController.swift in Sources */,
 				14F81B3822D7B55E00009DD1 /* User.swift in Sources */,
+				14F71AFC22DE131B00FBA3BC /* DatePickerView.swift in Sources */,
 				10E10C1FBF1C8F1298CD3D5D /* LoginPresenter.swift in Sources */,
 				98CCE1C11351B94F1BE03B09 /* LoginInteractor.swift in Sources */,
 				1D02CCA01F3484F7CE0DBECB /* LoginConfigurator.swift in Sources */,
 				14F71AF422DBC20300FBA3BC /* DateExtension.swift in Sources */,
+				14F71AF722DDD4C100FBA3BC /* TimeForReportToShow.swift in Sources */,
 				14F71AE622DBACDE00FBA3BC /* ModelRepresentable.swift in Sources */,
 				14F71AD922D7C58700FBA3BC /* RealmService.swift in Sources */,
 				9AF62B09A31BF1D14C8930D8 /* LoginRouter.swift in Sources */,
@@ -416,6 +474,12 @@
 				14F71AEF22DBAEEC00FBA3BC /* EventBaseCellModel.swift in Sources */,
 				BC0B715A712413D232E54D8F /* AddEventRouter.swift in Sources */,
 				68220D42CDA328665BFD6147 /* AddEventProtocols.swift in Sources */,
+				E1AD1E83E8FF3F416053B609 /* ReportViewController.swift in Sources */,
+				DDC9890EF060CB8482C0863A /* ReportPresenter.swift in Sources */,
+				FC20F1FE8C80698AEF40CEE8 /* ReportInteractor.swift in Sources */,
+				3997EED8E7D57A867F799B39 /* ReportConfigurator.swift in Sources */,
+				356CBC3ABAAE5D95C0244DC2 /* ReportRouter.swift in Sources */,
+				574E75BBDD24CDD2EFD7F93D /* ReportProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

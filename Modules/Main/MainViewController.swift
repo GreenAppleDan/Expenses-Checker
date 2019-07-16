@@ -14,6 +14,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     let selfToLoginSegueName = "fromExpensesToLogin"
     let selfToAddEvent = "fromMainToAddEvent"
+    let selfToReport = "fromMainToReport"
     var modelsArray = [EventInfoCellmodel]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -27,6 +28,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     }
     
     @IBAction func reportButtonClicked(_ sender: UIBarButtonItem) {
+        presenter.reportButtonCLicked()
     }
     
     func updateModelsArray(_ array: [EventInfoCellmodel]){

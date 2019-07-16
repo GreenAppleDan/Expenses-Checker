@@ -12,6 +12,8 @@ import Foundation
 import UIKit
 
 class MainRouter: MainRouterProtocol {
+
+    
     
     weak var viewController: MainViewController!
     
@@ -27,6 +29,10 @@ class MainRouter: MainRouterProtocol {
     
     func moveToAddEvent()  {
         viewController.performSegue(withIdentifier: viewController.selfToAddEvent , sender: nil)
+    }
+    
+    func moveToReports() {
+        viewController.performSegue(withIdentifier: viewController.selfToReport , sender: nil)
     }
     
 }

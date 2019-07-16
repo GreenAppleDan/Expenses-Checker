@@ -10,6 +10,8 @@
 import Foundation
 
 class MainPresenter: MainPresenterProtocol {
+
+    
     
     weak var view: MainViewProtocol!
     var interactor: MainInteractorProtocol!
@@ -37,13 +39,18 @@ class MainPresenter: MainPresenterProtocol {
         router.moveToAddEvent()
     }
     
+    func reportButtonCLicked() {
+        router.moveToReports()
+    }
+    
     func eventsDidRecieve(_ arrayOfEvents: [Expenses]) {
         var arrayOfCellModels = [EventInfoCellmodel]()
         for event in arrayOfEvents {
             let cellModel = EventInfoCellmodel(expense: event)
             arrayOfCellModels.append(cellModel)
-            view?.updateModelsArray(arrayOfCellModels)
+            
         }
+        view?.updateModelsArray(arrayOfCellModels)
     }
 }
 

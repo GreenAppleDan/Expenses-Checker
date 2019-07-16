@@ -9,5 +9,6 @@ target 'Expenses Checker' do
 
   # Pods for Expenses Checker
   pod 'RealmSwift'
-
+  pod 'Charts'
+  pod 'ChartsRealm'
 end

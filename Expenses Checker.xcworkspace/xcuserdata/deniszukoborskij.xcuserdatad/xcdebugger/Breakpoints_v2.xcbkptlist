@@ -58,12 +58,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Modules/Main/MainInteractor.swift"
-            timestampString = "584832723.474581"
+            timestampString = "584974541.6066149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "getEvents()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Services/RealmService.swift"
+            timestampString = "584976076.827769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getArrayOfMoneyEvents()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Expenses_Checker.RealmService.getArrayOfMoneyEvents() -&gt; Swift.Array&lt;Expenses_Checker.Expenses&gt;"
+                  moduleName = "Expenses Checker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deniszukoborskij/Desktop/Expenses%20Checker/Services/RealmService.swift"
+                  timestampString = "584972453.517385"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Expenses_Checker.Expenses, Expenses_Checker.Expenses) -&gt; Swift.Bool in Expenses_Checker.RealmService.getArrayOfMoneyEvents() -&gt; Swift.Array&lt;Expenses_Checker.Expenses&gt;"
+                  moduleName = "Expenses Checker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deniszukoborskij/Desktop/Expenses%20Checker/Services/RealmService.swift"
+                  timestampString = "584972453.530845"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Main/MainViewController.swift"
+            timestampString = "584976076.827915"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "updateModelsArray(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Report/ReportPresenter.swift"
+            timestampString = "584976076.828118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setupViewForShowingPieChart(arrayOfEvents:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
