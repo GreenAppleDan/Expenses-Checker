@@ -8,18 +8,18 @@
 
 import UIKit
 protocol DatePickerViewProtocol: class {
-    var arrayExpenseTypes: [String] {set get}
+    var arrayOfTimes: [String] {set get}
     //    var selectedExpenseTypeIndex: Int? {set get}
     //    func reload()
 }
 
 protocol DatePickerViewDelegate {
-    func ExpenseTypePickerViewApplyButtonClicked(selectedRow: Int)
+    func DatePickerViewApplyButtonClicked(selectedRow: Int)
 }
 
 class DatePickerView: UIView , UIPickerViewDelegate , UIPickerViewDataSource , DatePickerViewProtocol {
     
-    var arrayExpenseTypes = ExpensesTypes.arrayOfExpensesTypes
+    var arrayOfTimes: [String] = [TimeForReportToShow.week.rawValue , TimeForReportToShow.month.rawValue , TimeForReportToShow.yearHalf.rawValue , TimeForReportToShow.year.rawValue]
     //MARK: Outlets
     @IBOutlet var view: UIView!
     
@@ -28,12 +28,12 @@ class DatePickerView: UIView , UIPickerViewDelegate , UIPickerViewDataSource , D
     //MARK: Actions
     @IBAction func applyButtonClicked(_ sender: UIButton) {
         
-        delegate?.ExpenseTypePickerViewApplyButtonClicked(selectedRow: pickerView.selectedRow(inComponent: componentIndex))
+        delegate?.DatePickerViewApplyButtonClicked(selectedRow: pickerView.selectedRow(inComponent: componentIndex))
     }
     
     
     //MARK Variables
-    var delegate: ExpenseTypePickerViewDelegate?
+    var delegate: DatePickerViewDelegate?
     private let numberOfComponents = 1
     private let componentIndex = 0
     
@@ -52,7 +52,7 @@ class DatePickerView: UIView , UIPickerViewDelegate , UIPickerViewDataSource , D
     }
     
     private func xibSetup() {
-        Bundle.main.loadNibNamed("ExpenseTypePickerView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("DatePickerView", owner: self, options: nil)
         addSubview(view)
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -71,11 +71,11 @@ class DatePickerView: UIView , UIPickerViewDelegate , UIPickerViewDataSource , D
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arrayExpenseTypes.count
+        return arrayOfTimes.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arrayExpenseTypes[row]
+        return arrayOfTimes[row]
     }
     
 }

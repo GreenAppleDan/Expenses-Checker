@@ -20,5 +20,9 @@ class ReportConfigurator: ReportConfiguratorProtocol {
         viewController.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+       
+        
+        presenter.datePickerView = viewController.datePickerView
+        viewController.datePickerView.delegate = presenter
     }
 }

@@ -189,6 +189,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McI-ns-xns" customClass="DatePickerView" customModule="Expenses_Checker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="568" width="320" height="214"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="3mx-b0-2qZ"/>
+                                </constraints>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFx-4N-8tf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
@@ -213,6 +220,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="McI-ns-xns" firstAttribute="bottom" secondItem="PCU-ty-nWK" secondAttribute="bottom" constant="214" id="2YY-KA-Tyu"/>
+                            <constraint firstItem="McI-ns-xns" firstAttribute="leading" secondItem="PCU-ty-nWK" secondAttribute="leading" id="3Gi-k3-7cG"/>
                             <constraint firstItem="uGy-O7-bbI" firstAttribute="leading" secondItem="PCU-ty-nWK" secondAttribute="leading" id="RcM-cB-784"/>
                             <constraint firstItem="uGy-O7-bbI" firstAttribute="top" secondItem="UFx-4N-8tf" secondAttribute="bottom" id="XKo-i6-oY6"/>
                             <constraint firstItem="UFx-4N-8tf" firstAttribute="top" secondItem="PCU-ty-nWK" secondAttribute="top" id="a0p-Tn-iTy"/>
@@ -220,11 +229,14 @@
                             <constraint firstItem="UFx-4N-8tf" firstAttribute="trailing" secondItem="uGy-O7-bbI" secondAttribute="trailing" id="h9O-MB-LgT"/>
                             <constraint firstItem="UFx-4N-8tf" firstAttribute="leading" secondItem="uGy-O7-bbI" secondAttribute="leading" id="kHJ-q8-uHs"/>
                             <constraint firstItem="uGy-O7-bbI" firstAttribute="bottom" secondItem="PCU-ty-nWK" secondAttribute="bottom" id="rW8-dH-vr7"/>
+                            <constraint firstItem="PCU-ty-nWK" firstAttribute="trailing" secondItem="McI-ns-xns" secondAttribute="trailing" id="to3-Lk-K1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PCU-ty-nWK"/>
                     </view>
                     <connections>
                         <outlet property="dateButton" destination="qXG-HA-7P7" id="v5K-0v-y6E"/>
+                        <outlet property="datePickerView" destination="McI-ns-xns" id="znU-Sp-dmw"/>
+                        <outlet property="offsetDatePickerConstant" destination="2YY-KA-Tyu" id="Efh-rL-6D2"/>
                         <outlet property="pieChartView" destination="uGy-O7-bbI" id="N3m-3d-8OJ"/>
                         <segue destination="i0Z-L8-Vbe" kind="show" identifier="fromReportToMain" id="Egs-pL-0K7"/>
                     </connections>

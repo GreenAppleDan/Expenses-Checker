@@ -10,12 +10,10 @@
 import Foundation
 import UIKit
 import Charts
-class ReportPresenter: ReportPresenterProtocol {
+class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
 
     
-    
-    
-    
+    var datePickerView: DatePickerViewProtocol!
     weak var view: ReportViewProtocol!
     var interactor: ReportInteractorProtocol!
     var router: ReportRouterProtocol!
@@ -68,6 +66,28 @@ class ReportPresenter: ReportPresenterProtocol {
     
     func backButtonPressed(){
         router.moveToMain()
+    }
+    
+    func DatePickerViewApplyButtonClicked(selectedRow: Int) {
+        var dateString = datePickerView.arrayOfTimes[selectedRow]
+        view.hidePickerView()
+        view.changeDateButtonName(to: dateString)
+        
+        switch dateString{
+        case TimeForReportToShow.week.rawValue:
+            prepareDataForPieChart(time: .week)
+        case TimeForReportToShow.month.rawValue:
+            prepareDataForPieChart(time: .month)
+        case TimeForReportToShow.yearHalf.rawValue:
+            prepareDataForPieChart(time: .yearHalf)
+        case TimeForReportToShow.year.rawValue:
+            prepareDataForPieChart(time: .year)
+        default: print("error")
+        }
+        
+//        view.eventType = ExpensesTypes.arrayOfExpensesTypes[selectedRow]
+//        view.hidePickerView()
+//        view.setEventTypeTextField(text: ExpensesTypes.arrayOfExpensesTypes[selectedRow])
     }
 }
 

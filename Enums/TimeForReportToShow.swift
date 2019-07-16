@@ -7,9 +7,9 @@
 //
 
 import Foundation
-enum TimeForReportToShow {
-    case week
-    case month
-    case yearHalf
-    case year
+enum TimeForReportToShow: String {
+    case week = "Week"
+    case month = "Month"
+    case yearHalf = "Half a Year"
+    case year = "Year"
 }

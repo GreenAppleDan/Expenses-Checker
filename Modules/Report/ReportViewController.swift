@@ -16,11 +16,16 @@ class ReportViewController: UIViewController, ReportViewProtocol {
     var dataEntryArray: [PieChartDataEntry]?
     var colors: [UIColor]?
     
+    @IBOutlet weak var datePickerView: DatePickerView!
+    
+    
+    @IBOutlet weak var offsetDatePickerConstant: NSLayoutConstraint!
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         presenter.backButtonPressed()
     }
     
     @IBAction func changeDateButtonCLicked(_ sender: UIBarButtonItem) {
+        showPickerView()
     }
     
     @IBOutlet weak var dateButton: UIBarButtonItem!
@@ -53,6 +58,27 @@ class ReportViewController: UIViewController, ReportViewProtocol {
         pieChartView.data = chartData
         
         
+    }
+    
+    func showPickerView() {
+        view.bringSubviewToFront(datePickerView)
+        pieChartView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.5) {
+            self.offsetDatePickerConstant.constant = -self.datePickerView.frame.size.height
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func hidePickerView() {
+        pieChartView.isUserInteractionEnabled = true
+        UIView.animate(withDuration: 0.5) {
+            self.offsetDatePickerConstant.constant = self.datePickerView.frame.size.height
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func changeDateButtonName(to: String){
+        dateButton.title = to
     }
 }
 
