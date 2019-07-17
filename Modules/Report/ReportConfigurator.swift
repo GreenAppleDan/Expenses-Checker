@@ -24,5 +24,7 @@ class ReportConfigurator: ReportConfiguratorProtocol {
         
         presenter.datePickerView = viewController.datePickerView
         viewController.datePickerView.delegate = presenter
+        
+        viewController.pieChartView.delegate = viewController
     }
 }

@@ -17,6 +17,7 @@ protocol ReportViewProtocol: class {
     func showPickerView()
     func hidePickerView()
     func changeDateButtonName(to: String)
+    var pieChartView: PieChartView! {get set}
 }
 
 protocol ReportPresenterProtocol: class {
@@ -26,6 +27,7 @@ protocol ReportPresenterProtocol: class {
     func prepareDataForPieChart(time: TimeForReportToShow)
     func setupViewForShowingPieChart(arrayOfEvents: [Expenses])
     func backButtonPressed()
+    func chartValueSelected(value: PieChartDataEntry)
     
 }
 

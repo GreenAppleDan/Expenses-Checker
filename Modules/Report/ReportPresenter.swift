@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import Charts
 class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
-
+    
     
     var datePickerView: DatePickerViewProtocol!
     weak var view: ReportViewProtocol!
@@ -26,6 +26,7 @@ class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
     
     func configureView() {
         prepareDataForPieChart(time: .month)
+        setDataForCenterLabelInChart(label: "Tap Chart To See %")
     }
     
     func prepareDataForPieChart(time: TimeForReportToShow) {
@@ -69,6 +70,12 @@ class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
     }
     
     func DatePickerViewApplyButtonClicked(selectedRow: Int) {
+        
+        //changing center text and deselecting previosly selected entry in piechhart
+        view.pieChartView.highlightValue(nil)
+        setDataForCenterLabelInChart(label: "Tap Chart To See %")
+        
+        //setting up data for chart
         let dateString = datePickerView.arrayOfTimes[selectedRow]
         view.hidePickerView()
         view.changeDateButtonName(to: dateString)
@@ -84,10 +91,23 @@ class ReportPresenter: ReportPresenterProtocol , DatePickerViewDelegate {
             prepareDataForPieChart(time: .year)
         default: print("error")
         }
-        
-//        view.eventType = ExpensesTypes.arrayOfExpensesTypes[selectedRow]
-//        view.hidePickerView()
-//        view.setEventTypeTextField(text: ExpensesTypes.arrayOfExpensesTypes[selectedRow])
     }
+    
+    func chartValueSelected(value: PieChartDataEntry){
+        var expensesCombined = Double(0)
+        for dataEntry in view.dataEntryArray! {
+            expensesCombined += dataEntry.value
+        }
+        let valueInPercentage = Double(round(100000 * value.value / expensesCombined)/1000)
+        setDataForCenterLabelInChart(label: value.label! + ": " + String(valueInPercentage) + "%")
+    }
+    
+    func setDataForCenterLabelInChart(label: String) {
+    let centerTextAttribute = [ NSAttributedString.Key.font: UIFont(name: "futura", size: 14.0)!]
+    let centerText = NSAttributedString(string: label, attributes: centerTextAttribute)
+    view.pieChartView.centerAttributedText = centerText
+    }
+    
+    
 }
 

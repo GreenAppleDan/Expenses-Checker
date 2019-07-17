@@ -39,6 +39,9 @@ class ReportViewController: UIViewController, ReportViewProtocol {
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
+
+
+        pieChartView.chartDescription?.textAlign = .left
         super.viewDidLoad()
         configurator.configure(with: self)
         presenter.configureView()
@@ -79,6 +82,14 @@ class ReportViewController: UIViewController, ReportViewProtocol {
     
     func changeDateButtonName(to: String){
         dateButton.title = to
+    }
+}
+
+extension ReportViewController: ChartViewDelegate{
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        presenter.chartValueSelected(value: entry as! PieChartDataEntry)
+
     }
 }
 
