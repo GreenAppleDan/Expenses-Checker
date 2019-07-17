@@ -26,6 +26,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
+        self.view.isHidden = true
         super.viewDidLoad()
         configurator.configure(with: self)
         presenter.configureView()
@@ -33,6 +34,10 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         presenter.checkIfUserAlreadyLoggedIn()
+    }
+    
+    func makeWholeViewVisible() {
+        self.view.isHidden = false
     }
     
     // MARK: actions

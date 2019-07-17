@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 protocol LoginViewProtocol: class {
+    func makeWholeViewVisible()
 }
 
 protocol LoginPresenterProtocol: class {

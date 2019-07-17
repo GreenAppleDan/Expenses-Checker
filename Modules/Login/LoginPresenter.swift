@@ -33,7 +33,6 @@ class LoginPresenter: LoginPresenterProtocol {
     // MARK: - LoginPresenterProtocol methods
     
     func configureView() {
-//        checkIfUserAlreadyLoggedIn()
     }
     
     func showExpensesView() {
@@ -44,6 +43,8 @@ class LoginPresenter: LoginPresenterProtocol {
         let username = UserDefaults.standard.string(forKey: "username") ?? ""
         if username != "" {
             loginButtonClicked(username: username)
+        } else {
+            view.makeWholeViewVisible()
         }
     }
 }
