@@ -72,6 +72,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "MainViewController.tableView(_:commit:forRowAt:):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrayOfEventsForDeleting.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "LoginViewController.loginButtonClickedLogin(_:):LoginViewController.swift">
          <PersistentStrings>
             <PersistentString

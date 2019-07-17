@@ -29,6 +29,12 @@ class AddEventViewController: UIViewController, AddEventViewProtocol {
         if eventDate != nil , amountOfMoney != nil , eventType != nil {
             presenter.addButtonClicked(eventType: eventType!, moneyAmount: amountOfMoney!, eventDate: eventDate!)
             presentAlert(title: "Success!", message: "Event added successfully!")
+            eventTypeTextField.text = ""
+            moneyAmountTextField.text = ""
+            dateTextField.text = ""
+            eventDate = nil
+            amountOfMoney = nil
+            eventType = nil
         } else {
             presentAlert(title: "Error" , message: "Fill all fields" )
         }

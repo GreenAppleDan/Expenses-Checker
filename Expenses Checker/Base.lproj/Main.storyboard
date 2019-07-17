@@ -352,6 +352,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="pmd-3I-Ymp"/>
         <segue reference="Egs-pL-0K7"/>
     </inferredMetricsTieBreakers>
 </document>

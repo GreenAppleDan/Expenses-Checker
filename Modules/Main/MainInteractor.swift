@@ -28,5 +28,11 @@ class MainInteractor: MainInteractorProtocol {
 //        let moneyEvents = realm.objects(Expenses.self)
     }
     
+    func removeObjectFromRealm(object: Expenses) {
+        realmService!.deleteExpenseobject(object: object)
+        let updatedEventsArray = realmService!.getArrayOfMoneyEvents()
+        presenter.eventsDidRecieve(updatedEventsArray)
+    }
+    
 }
 

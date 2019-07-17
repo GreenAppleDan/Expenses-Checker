@@ -17,6 +17,7 @@ protocol LoginPresenterProtocol: class {
     func configureView()
     func loginButtonClicked(username:String)
     func showExpensesView()
+    func checkIfUserAlreadyLoggedIn()
     
 }
 

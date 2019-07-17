@@ -12,6 +12,7 @@ import Foundation
 protocol MainViewProtocol: class {
     var modelsArray : [EventInfoCellmodel] {get set}
     func updateModelsArray(_ array: [EventInfoCellmodel])
+    var arrayOfEventsForDeleting : [Expenses] {get set}
 }
 
 protocol MainPresenterProtocol: class {
@@ -22,12 +23,14 @@ protocol MainPresenterProtocol: class {
     func eventsDidRecieve(_ arrayOfEvents: [Expenses])
     func viewWillAppear()
     func reportButtonCLicked()
+    func removeObjectFromRealm(object: Expenses)
     
 }
 
 protocol MainInteractorProtocol: class {
     var realmService: RealmServiceProtocol? {get set}
     func getEvents()
+    func removeObjectFromRealm(object: Expenses)
     
 }
 

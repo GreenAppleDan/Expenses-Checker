@@ -31,10 +31,14 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         presenter.configureView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        presenter.checkIfUserAlreadyLoggedIn()
+    }
+    
     // MARK: actions
     @IBAction func loginButtonClickedLogin(_ sender: UIButton) {
         if usernameTextField.text != "" {
-            presenter.loginButtonClicked(username: usernameTextField.text!)
+            presenter.loginButtonClicked(username: usernameTextField.text!.trimmingCharacters(in: .whitespaces))
         }
     }    
     

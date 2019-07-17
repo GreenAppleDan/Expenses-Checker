@@ -15,6 +15,7 @@ protocol RealmServiceProtocol {
     func addEvent(eventType: String, moneyAmount: Int, eventDate: Date)
     func getArrayOfMoneyEvents() -> [Expenses]
     func getArrayOfMoneyEventsFilteredWithDate(date: Date) -> [Expenses]
+    func deleteExpenseobject(object: Expenses)
 }
 
 class RealmService: RealmServiceProtocol {
@@ -60,6 +61,13 @@ class RealmService: RealmServiceProtocol {
         }
         return arrayOfEvents
         
+    }
+    
+    func deleteExpenseobject(object: Expenses) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(object)
+        }
     }
     
     

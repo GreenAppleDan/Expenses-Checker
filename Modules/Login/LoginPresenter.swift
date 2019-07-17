@@ -25,6 +25,7 @@ class LoginPresenter: LoginPresenterProtocol {
     //MARK: Action methods
     
     func loginButtonClicked(username:String) {
+        UserDefaults.standard.set(username, forKey: "username")
         interactor.loginButtonClicked(username: username)
     }
     
@@ -32,11 +33,18 @@ class LoginPresenter: LoginPresenterProtocol {
     // MARK: - LoginPresenterProtocol methods
     
     func configureView() {
-        
+//        checkIfUserAlreadyLoggedIn()
     }
     
     func showExpensesView() {
         router.showExpensesView()
+    }
+    
+    func checkIfUserAlreadyLoggedIn() {
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        if username != "" {
+            loginButtonClicked(username: username)
+        }
     }
 }
 

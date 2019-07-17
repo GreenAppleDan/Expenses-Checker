@@ -16,6 +16,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     let selfToAddEvent = "fromMainToAddEvent"
     let selfToReport = "fromMainToReport"
     var modelsArray = [EventInfoCellmodel]()
+    var arrayOfEventsForDeleting = [Expenses]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -71,6 +72,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let removedElement = arrayOfEventsForDeleting[indexPath.row]
+            modelsArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+            presenter.removeObjectFromRealm(object: removedElement)
+        }
+    }
     
     
     

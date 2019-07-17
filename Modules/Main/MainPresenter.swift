@@ -32,6 +32,7 @@ class MainPresenter: MainPresenterProtocol {
     }
     
     func logOutButtonClicked() {
+        UserDefaults.standard.set("", forKey: "username")
         router.moveToLogin()
     }
     
@@ -44,6 +45,7 @@ class MainPresenter: MainPresenterProtocol {
     }
     
     func eventsDidRecieve(_ arrayOfEvents: [Expenses]) {
+        view?.arrayOfEventsForDeleting = arrayOfEvents
         var arrayOfCellModels = [EventInfoCellmodel]()
         for event in arrayOfEvents {
             let cellModel = EventInfoCellmodel(expense: event)
@@ -51,6 +53,10 @@ class MainPresenter: MainPresenterProtocol {
             
         }
         view?.updateModelsArray(arrayOfCellModels)
+    }
+    
+    func removeObjectFromRealm(object: Expenses) {
+        interactor.removeObjectFromRealm(object:object)
     }
 }
 
